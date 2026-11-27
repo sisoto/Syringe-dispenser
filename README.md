@@ -110,6 +110,6 @@ Arduino IDE는 `.ino` 파일이 같은 이름의 폴더 안에 있어야 열리�
 - `UiFonts.cpp`에 포함된 폰트는 원 저작자의 라이선스를 따릅니다 ([`src/Injection/assets/FONT-LICENSE.txt`](src/Injection/assets/FONT-LICENSE.txt)).
 - LovyanGFX, lvgl, INA228, Arduino-ESP32 등 외부 라이브러리는 각 라이브러리의 라이선스를 따릅니다.
 
-**상업적 이용 문의:** (연락처 기입)
+**상업적 이용 문의:** https://www.instagram.com/sisoto.ca
 
 Copyright (c) 2026 sisoto
