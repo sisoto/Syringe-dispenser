@@ -1,6 +1,6 @@
 # Injection — 주사기 디스펜서 (STS3250 서보)
 
-ESP32-S3 N16R8 + Feetech STS3250 버스 서보 + 4.0" ST7796S(MSP4031) 화면으로 주사기를 설정 시간 동안 일정하게 밀어 주는 펌웨어입니다. 전체 배선도는 `docs/wiring.png`에 있습니다.
+ESP32-S3 N16R8 + Feetech STS3250 버스 서보 + 4.0" ST7796S(MSP4031) 화면으로 주사기를 설정 시간 동안 일정하게 밀어 주는 펌웨어입니다. 전체 배선도는 [`wiring.png`](wiring.png)에 있습니다.
 
 ## 1. 배선
 
@@ -102,4 +102,4 @@ GND 전부 공통 (ESP32 ↔ 어댑터 ↔ 9V 전원)
 - Arduino-ESP32 3.3.x / ESP32S3 Dev Module / Flash 16MB QIO / PSRAM OPI / Partition Custom(`partitions.csv`)
 - LovyanGFX 1.2.x, lvgl 8.3.11, INA228(Rob Tillaart) 0.4.1
 - 적용되는 `lv_conf.h`에서: `LV_COLOR_DEPTH 16`, `LV_USE_IMG / LV_USE_LABEL / LV_USE_LINE 1`, `LV_MEM_CUSTOM 0`이면 `LV_MEM_SIZE ≥ 128KB`, `LV_TICK_CUSTOM 1`(millis). `LV_COLOR_16_SWAP`은 0/1 어느 쪽이든 자동 처리됩니다. 조건이 안 맞으면 `UiBuildConfig.h`가 컴파일 오류로 알려 줍니다.
-- WiFi SSID·비밀번호·OTA 비밀번호는 `Secrets.h`에 직접 채웁니다. `WIFI_SSID`가 비어 있으면 Wi-Fi를 켜지 않고(설정 메뉴에 "On (not set up)"), 업로드는 USB로만 할 수 있습니다. 값을 채운 `Secrets.h`는 공유하지 마세요.
+- `Secrets.example.h`를 복사해 `Secrets.h`로 이름을 바꾼 뒤 WiFi SSID·비밀번호·OTA 비밀번호를 채웁니다(`Secrets.h`는 `.gitignore`로 저장소에서 제외됩니다). `WIFI_SSID`가 비어 있으면 Wi-Fi를 켜지 않고(설정 메뉴에 "On (not set up)"), 업로드는 USB로만 할 수 있습니다. 값을 채운 `Secrets.h`는 공유하지 마세요.
