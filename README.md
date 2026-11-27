@@ -40,7 +40,7 @@ Syringe-dispenser/
 ├─ .gitignore
 ├─ src/
 │  └─ Injection/        Arduino 스케치 폴더 (Injection.ino 외)
-├─ hardware/            회로도 및 하드웨어 자료 (CC BY-NC 4.0)
+├─ hardware/            3D 파일 (STL) (CC BY-NC-ND 4.0)
 └─ docs/                조립 및 제작 안내서, 배선도 (CC BY-NC 4.0)
    ├─ BUILD-GUIDE-KO.md 배선·구동 방식·안전 동작·첫 구동·설정·빌드 안내
    └─ wiring.png        전체 배선도
@@ -101,10 +101,11 @@ Arduino IDE는 `.ino` 파일이 같은 이름의 폴더 안에 있어야 열리�
 | 대상 | 라이선스 |
 |---|---|
 | 펌웨어 코드 (`src/`) | [PolyForm Noncommercial 1.0.0](LICENSE) |
-| 하드웨어 자료 (`hardware/`) | [CC BY-NC 4.0](hardware/LICENSE) |
+| 3D 파일 (`hardware/`, STL) | [CC BY-NC-ND 4.0](hardware/LICENSE) |
 | 문서·배선도 (`docs/`, 이 README) | [CC BY-NC 4.0](docs/LICENSE) |
 
-- 개인 학습, 연구, 비영리 목적이라면 출처를 밝히고 자유롭게 보고, 따라 만들고, 수정해서 공유할 수 있습니다.
+- 개인 학습, 연구, 비영리 목적이라면 출처를 밝히고 자유롭게 보고, 따라 만들고, 공유할 수 있습니다.
+- 펌웨어 코드와 문서는 수정해서 공유할 수 있지만, **3D 파일(`hardware/`)은 수정한 파일을 배포할 수 없습니다** (원본 그대로만 공유 가능).
 - 판매, 유료 서비스, 제품 탑재 등 상업적 이용은 아래 연락처로 먼저 문의해 주세요.
 - 부팅 로고 이미지(`Logo.h`, SISOTO 로고)는 위 라이선스 적용 대상에서 **제외**되며, 무단 사용을 허용하지 않습니다.
 - `UiFonts.cpp`에 포함된 폰트는 원 저작자의 라이선스를 따릅니다 ([`src/Injection/assets/FONT-LICENSE.txt`](src/Injection/assets/FONT-LICENSE.txt)).
