@@ -1,0 +1,19 @@
+# ESP32-S3-WROOM-1 N16R8 (16MB Flash / 8MB Octal PSRAM)
+#
+# 앱 슬롯 6MB x 2 — OTA 무선 업데이트 지원.
+# LVGL + LovyanGFX + WiFi + 폰트 + 로고까지 합쳐도 2MB 수준이라
+# 여유가 넉넉하다.
+#
+# ★ Arduino IDE 설정이 아래와 맞아야 이 파일이 적용된다:
+#     Flash Size       : 16MB (128Mb)
+#     Partition Scheme : Custom      <- 필수. 다른 값이면 이 파일은 무시됨
+#     PSRAM            : OPI PSRAM
+#     Flash Mode       : QIO 80MHz   <- 부팅 로그가 mode:DOUT 이면 여기가 원인
+#
+# Name,     Type, SubType,  Offset,    Size
+nvs,        data, nvs,      0x9000,    0x5000,
+otadata,    data, ota,      0xE000,    0x2000,
+app0,       app,  ota_0,    0x10000,   0x600000,
+app1,       app,  ota_1,    0x610000,  0x600000,
+spiffs,     data, spiffs,   0xC10000,  0x3E0000,
+coredump,   data, coredump, 0xFF0000,  0x10000,
